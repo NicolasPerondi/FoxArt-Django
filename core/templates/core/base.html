@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %} FoxArt Impresiones 3D</title>
+
+
+      <script
+      src="https://kit.fontawesome.com/12a2cb45db.js"
+      crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <img
+          style="padding: 10px 30px 10px 10px"
+          src="{% static 'src/images/M2SinBordes-8.png'%}"
+          alt=""
+          width="30%"
+        />
+        <h1>Impresiones 3D</h1>
+        <ul class="redes-vertical">
+          <li>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+          <li><a href="{% url 'contacto' %}">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+      {% block headers %} {% endblock %}
+
+      {% block content %}{% endblock %}
+
+    </main>
+
+    <footer>
+      <ul>
+        <li>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        </li>
+      </ul>
+      <p style="background-color: antiquewhite">
+        © Todos los derechos reservados
+      </p>
+    </footer>
+  </body>
+</html>

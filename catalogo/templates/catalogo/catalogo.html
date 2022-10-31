@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+{% block title %}Home{% endblock %}
+
+
+{% block headers %} <h1>Nuestro Catalogo</h1> {% endblock %}
+
+{% block content %}
+    {% for product in products %}
+      <div class="catalogo">
+        <a href="">
+          <div class="categoria">
+            <h3>{{product.title}}</h3>
+            <img src="{{product.image.url}}" alt="{{product.title}}" />
+          </div>
+        </a>
+    {% endfor %}
+
+{% endblock %}

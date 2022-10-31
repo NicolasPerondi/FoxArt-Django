@@ -1,0 +1,216 @@
+body{
+    font-family: 'Libre Bodoni', serif;font-family: 'Rubik', sans-serif;
+    background-color: #cf900a;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #C25400;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header h1{
+    font-size: 5.2vw;}
+
+.header ul{
+    justify-content: end;
+}
+
+nav{
+    background-color: #ffffff;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+li{
+    list-style: none;
+    margin: 5px 30px;
+}
+li a {
+    padding: 10px;
+    margin: 0px;
+}
+
+nav ul li{
+    margin: 0px 40px;
+    padding: 10px 0px;
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ li a:hover {
+    color: white;
+    background-color: #cf900a;
+  }
+
+  a:active {
+    color: #C25400;
+  }
+
+main h1{
+    padding: 10px;
+    margin: 30px 0px 30px 0px;
+    background-color: #C25400;
+
+}
+
+.catalogo{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.categoria{
+    box-sizing: border-box;
+    max-width: 250px;
+    max-height: 270px;
+    padding: 5px 40px 40px 40px;
+    background-color: antiquewhite;
+    border-radius: 5%;
+    border: solid #C25400;
+}
+.categoria:hover{
+    transform: scale(1.05)
+}
+
+.categoria h3{
+    margin: 10px;
+    padding-bottom: 5px;
+    text-decoration:underline;
+}
+
+.categoria img{
+    max-width: 100%;
+    border-radius: 5%;
+}
+
+
+footer{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #C25400;
+    font-family: 'Libre Bodoni', serif;font-family: 'Rubik', sans-serif;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li a:hover{
+    border-radius: 10px;
+}
+
+.contenedor-nosotros{
+    margin: auto;
+    width: 90%;
+    background-color: #cf900a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+}
+.item-nosotros{
+    width: 60%;
+    background-color: antiquewhite;
+    margin: 3px;
+    border-radius: 20px;
+    border: #C25400 solid 3px;
+    padding: 0px 20px;
+}
+
+form{
+    margin: auto;
+    width: 40%;
+    background-color:antiquewhite;
+    border-radius: 20px;
+    border: #C25400 solid 3px;
+    padding: 20px;
+}
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    border: #C25400 solid 1px;
+    border-radius: 10px;
+}
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+#boton{
+    background-color: #C25400;
+    padding: 20px;
+    max-width: 35%;
+    margin: 0px;
+    border: white solid 1px;
+}
+#boton:hover{
+    cursor: pointer;
+    background-color: #cf900a;
+    color: #ffffff;
+}
+
+.redes ul{
+    display: flex;
+    justify-content: center;
+}
+
+.redes-vertical li {
+    padding-top: 8px;
+}
+.redes-vertical li a:hover{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    li{ margin: 3px 20px;}
+    .header{
+        justify-content: center;}
+
+    .catalogo{gap: 5px;}
+    footer{margin-top: 25px;}
+    main h1{
+        margin: 20px 0px 20px 0px;}
+    form{
+        width: 80%;
+    }
+    #boton{
+        width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+    nav ul{
+        justify-content: start;}
+        li{ margin: 6px 40px;}
+    .header{
+        justify-content: space-between;}
+    .catalogo{gap: 50px;}
+    footer{margin-top: 50px;}
+    main h1{
+        margin: 40px 0px 40px 0px;}
+}
