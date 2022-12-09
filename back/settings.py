@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'catalogo.apps.CatalogoConfig'
+    'productos.apps.ProductosConfig',
+    'profiles'
+
+
 ]
 
 MIDDLEWARE = [
@@ -106,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -118,6 +122,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+#archivos medias
 STATIC_URL = 'static/'
 MEDIA_URL ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
@@ -126,3 +131,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# autenticacion (redirecciono fuera de profile)
+#LOGIN_REDIRECT_URL = 'productos:productos'
+LOGOUT_REDIRECT_URL = 'productos:productos'
+
+# Emails
+#if DEBUG:
+#    EMAIL_BACKEND='django.core.mail.backends.filebased.EmailBackend'
+#    EMAIL_FILE_PATH= os.path.join(BASE_DIR,"sent-emails")
+#else:
+#    pass
+
+# email config
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '5b3ddadcfb6c6d'
+EMAIL_HOST_PASSWORD = '6a4cbb6d7992ce'
+EMAIL_PORT = '2525'

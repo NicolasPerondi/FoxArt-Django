@@ -1,17 +1,22 @@
 {% extends 'core/base.html' %}
 {% load static %}
-{% block title %}{{product.title}}{% endblock %}
+{% block title %}{{page.title}}{% endblock %}
 {% block content %}
+{% include 'productos/includes/productos_menu.html' %}
+
 <main role="main">
+
   <div class="container">
     <div class="row mt-3">
       <div class="col-md-9 mx-auto">
         <h2 class="section-heading mb-4">{{product.title}}</h2>
         <div>
-          {{product.content|safe}}
-
-            <p><a href="{% url 'catalogo:update' page.id %}">Editar</a></p>
-
+          {{product.description|safe}}
+          {{product.precio|safe}}
+          {% if request.user.is_staff %}
+            <p><a href="{% url 'productos:update' product.id %}">Editar</a></p>
+            <p><a href="{% url 'productos:productos' %}">Atras</a></p>
+          {% endif %}
         </div>
       </div>
     </div>

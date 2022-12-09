@@ -29,6 +29,7 @@
           width="30%"
         />
         <h1>Impresiones 3D</h1>
+
         <ul class="redes-vertical">
           <li>
             <a href=""><i class="fa-brands fa-instagram"></i></a>
@@ -40,12 +41,36 @@
             <a href=""><i class="fa-brands fa-whatsapp"></i></a>
           </li>
         </ul>
+
+
       </div>
+        <ul class="login-menu">
+            {% if not request.user.is_authenticated %}
+           <li>
+             <a href="{% url 'login' %}"><i class="fa-solid fa-right-to-bracket"></i></a>
+           </li>
+           <li>
+             <a href="{% url 'signup' %}"><i class="fa-solid fa-user-plus"></i></a>
+           </li>
+            {% else %}
+            <li>
+             <a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </li>
+            <li>
+             <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
+            </li>
+            {% endif %}
+        </ul>
       <nav>
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
           <li><a href="{% url 'contacto' %}">Contacto</a></li>
+
+          {% if request.user.is_authenticated %}
+          <li><a href="{% url 'profiles:list' %}">Perfiles</a></li>
+          <li><a href="{% url 'productos:productos' %}">Administrar</a></li>
+          {% endif %}
         </ul>
       </nav>
     </header>

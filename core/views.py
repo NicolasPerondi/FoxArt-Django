@@ -1,9 +1,16 @@
-from django.shortcuts import render, HttpResponse
+from django.views.generic.base import TemplateView
+from django.views.generic.list import ListView
+from productos.models import Product
 
-# Create your views here.
 
-def contacto(request):
-    return render(request,"core/contacto.html")
+class ContactPage(TemplateView):
+    template_name = "core/contacto.html"
 
-def nosotros(request):
-    return render(request,"core/nosotros.html")
+
+class NosotrosPage(TemplateView):
+    template_name = "core/nosotros.html"
+
+
+class HomePage(ListView):
+    model = Product
+    template_name = "core/home.html"

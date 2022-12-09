@@ -5,5 +5,30 @@
 {% block headers %} <h1>Home</h1> {% endblock %}
 
 {% block content %}
-    <p>Bienvenido</p>
+
+    {% for product in object_list|dictsort:"id" reversed%}
+      <div class="catalogo">
+        <a href="{% url 'productos:producto' product.id product.title|slugify %}">
+          <div class= "categoria" >
+            <h3>{{product.title}}</h3>
+            <img src="{{product.image.url}}" alt="{{product.title}}" />
+
+            <p>
+                <a href="{% url 'productos:producto' product.id product.title|slugify %}">Ver más</a>
+
+                {% if request.user.is_staff %}
+                | <a href="{% url 'productos:update' product.id %}">Editar</a>
+                | <a href="{% url 'productos:delete' product.id %}">Eliminar</a>
+                {% endif %}
+            </p>
+
+          </div>
+        </a>
+    </div>
+    {% endfor %}
+
+
 {% endblock %}
+
+
+
