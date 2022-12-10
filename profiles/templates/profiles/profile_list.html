@@ -2,6 +2,7 @@
 {% load static %}
 {% block title %}Perfiles{% endblock %}
 {% block content %}
+{% include "productos/includes/productos_menu.html" %}
 <style>.profile-avatar{float:left;width:4rem;height:4rem}.profile-data{padding-left:4.5rem;padding-top:.4rem;}</style>
 <main role="main">
   <div class="container">
@@ -26,7 +27,8 @@
               </a>
             </div>
           {% endfor %}
-        </div>
+    </div>
+  </div>
       <!-- Menú de paginación -->
 {% if is_paginated %}
   <nav aria-label="Page navigation">

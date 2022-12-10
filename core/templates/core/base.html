@@ -68,7 +68,6 @@
           <li><a href="{% url 'contacto' %}">Contacto</a></li>
 
           {% if request.user.is_authenticated %}
-          <li><a href="{% url 'profiles:list' %}">Perfiles</a></li>
           <li><a href="{% url 'productos:productos' %}">Administrar</a></li>
           {% endif %}
         </ul>

@@ -115,6 +115,56 @@ main h1{
 .categoria:hover{
     transform: scale(1.05)
 }
+.marco{
+    box-sizing: border-box;
+    overflow: hidden;
+    min-width: 550px;
+    min-height: 570px;
+    padding: 5px 0px 0px 0px;
+    background-color: antiquewhite;
+    border-radius: 5%;
+    border: solid #C25400;
+}
+.detalles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.otra{
+    margin: 30px;
+}
+.opciones{
+    display: flex;
+    justify-content: center;
+
+}
+.opciones p {
+    margin: 30px;
+    padding: 1px;
+}
+.opciones p a {
+    padding: 3px;
+}
+
+.opciones p a:hover{
+    color: white;
+    background-color: #cf900a;
+    border-radius: 5%;
+
+}
+
+.detalles img{
+    width: 300px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20%;
+}
+
+
+
+
+
 
 
 footer{
