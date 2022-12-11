@@ -1,6 +1,7 @@
+/* Aquí se ve en vista pequeña*/
 body{
     font-family: 'Libre Bodoni', serif;font-family: 'Rubik', sans-serif;
-    background-color: darkgreend;
+    background-color: #cf900a;
     text-align: center;
     margin: 0px;
     padding: 0px;
@@ -9,11 +10,12 @@ body{
 
 header{
     background-color: #C25400;
+    width: 100%;
 }
 .header{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
 }
 .header h1{
@@ -24,15 +26,17 @@ header{
 }
 
 nav{
-    background-color: #ffffff;
+    background-color: #cf900a;
 }
 
 nav ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 0px;
+    background: white;
 }
+
 
 li{
     list-style: none;
@@ -54,6 +58,7 @@ a{
     text-decoration: none;
 }
 
+
  li a:hover {
     color: white;
     background-color: #cf900a;
@@ -74,14 +79,15 @@ main h1{
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
+    gap: 15px;
+
 }
 
 .categoria{
     box-sizing: border-box;
     overflow: hidden;
-    min-width: 250px;
-    min-height: 270px;
+    width: 250px;
+    height: 300px;
     padding: 5px 0px 0px 0px;
     background-color: antiquewhite;
     border-radius: 5%;
@@ -125,6 +131,11 @@ main h1{
     border-radius: 5%;
     border: solid #C25400;
 }
+.marco h2{
+    background: #C25400;
+    padding: 20px;
+    margin-top: -10px ;
+}
 .detalles{
     display: flex;
     justify-content: center;
@@ -133,6 +144,7 @@ main h1{
 }
 .otra{
     margin: 30px;
+    overflow: hidden;
 }
 .opciones{
     display: flex;
@@ -161,13 +173,23 @@ main h1{
     border-radius: 20%;
 }
 
+.foto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
 
+.foto img{
+    border-radius: 50%;
+    min-width: 150px;
+    max-height: 160px;
 
-
-
+}
 
 
 footer{
+
     display: flex;
     flex-direction: column;
     background-color: #C25400;
@@ -268,8 +290,19 @@ textarea{
 
 }
 
+.perfiles{
 
 
+}
+
+.perfiles img{
+    width: 300px;
+    border-radius: 50%;
+
+}
+
+
+/*Pantalla mediana*/
 @media only screen and (min-width: 600px) {
     li {
         margin: 5px 30px;
@@ -291,14 +324,38 @@ textarea{
         width: 40%;
     }
 
-    #boton {
+    .boton {
         max-width: 35%;
     }
-
-    body {
-        background: #cf900a;
+    nav ul{
+        justify-content: center;
     }
+
 }
+
+/*Pantalla Grande*/
+@media only screen and (min-width: 1150px) {
+    nav ul{
+        justify-content: center;}
+        li{ margin: 6px 40px;}
+    .header{
+        justify-content: space-between;}
+    .catalogo{gap: 50px;}
+    footer{margin-top: 50px;}
+    main h1{
+        margin: 40px 0px 40px 0px;}
+
+    .categoria{
+    min-width: 200px;
+    min-height: 220px;
+}
+.categoria img{
+    max-width: 60%;
+    max-height: 160px;
+}
+}
+
+
 
 .tooltip {
   position: relative;
@@ -324,33 +381,4 @@ textarea{
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
-}
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width: 1150px) {
-    nav ul{
-        justify-content: start;}
-        li{ margin: 6px 40px;}
-    .header{
-        justify-content: space-between;}
-    .catalogo{gap: 50px;}
-    footer{margin-top: 50px;}
-    main h1{
-        margin: 40px 0px 40px 0px;}
-
-    .categoria{
-    min-width: 200px;
-    min-height: 220px;
-}
-.categoria img{
-    max-width: 60%;
-    max-height: 160px;
-}
 }
