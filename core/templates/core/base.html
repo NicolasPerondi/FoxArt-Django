@@ -60,9 +60,9 @@
              <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
             </li>
             {% endif %}
-        </ul>
+      </ul>
       <nav>
-        <ul>
+        <ul class="list">
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
           <li><a href="{% url 'contacto' %}">Contacto</a></li>
@@ -71,6 +71,8 @@
           <li><a href="{% url 'productos:productos' %}">Administrar</a></li>
           {% endif %}
         </ul>
+
+
       </nav>
     </header>
 
